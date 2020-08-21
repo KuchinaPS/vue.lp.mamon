@@ -1,47 +1,58 @@
 <template>
     <div class="clients">
-        <div class="clients-item">
-            <img src="../assets/img/logo-lightspeed.svg" alt="">
-        </div>
-        <div class="clients-item">
-            <img src="../assets/img/logo-trvl.svg" alt="">
-        </div>
-        <div class="clients-item">
-            <img src="../assets/img/logo-spider-strategies.svg" alt="">
-        </div>
-        <div class="clients-item">
-            <img src="../assets/img/logo-tripadvisor.svg" alt="">
-        </div>
-        <div class="clients-item">
-            <img src="../assets/img/logo-shutterfly.svg" alt="">
-        </div>
-        <div class="clientst-item">
-            <img src="../assets/img/logo-decos.svg" alt="">
-        </div>
-        <div class="clients-item">
-            <img src="../assets/img/logo-tiqets.svg" alt="">
-        </div>
-        <div class="clients-item">
-            <img src="../assets/img/logo-hotelchamp.svg" alt="">
-        </div>
-        <div class="clients-item">
-            <img src="../assets/img/logo-flitsmeister.svg" alt="">
-        </div>
-        <div class="clients-item">
-            <img src="../assets/img/logo-sap.svg" alt="">
-        </div>
-        <div class="clients-item">
-            <img src="../assets/img/logo-redkix.svg" alt="">
-        </div>
-        <div class="clients-item">
-            <img src="../assets/img/logo-nos.svg" alt="">
+        <div class="clients-item" v-for="item in image" :key="item">
+            <img :src="item.img" alt="">
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: "Clients"
+        name: "Clients",
+        data() {
+            return {
+                image: [
+                    {
+                        img: require('../assets/img/logo-lightspeed.svg')
+                    },
+                    {
+                        img: require('../assets/img/logo-trvl.svg')
+                    },
+                    {
+                        img: require('../assets/img/logo-spider-strategies.svg')
+                    },
+                    {
+                        img: require('../assets/img/logo-tripadvisor.svg')
+                    },
+                    {
+                        img: require('../assets/img/logo-shutterfly.svg')
+                    },
+                    {
+                        img: require('../assets/img/logo-decos.svg')
+                    },
+                    {
+                        img: require('../assets/img/logo-tiqets.svg')
+                    },
+                    {
+                        img: require('../assets/img/logo-hotelchamp.svg')
+                    },
+                    {
+                        img: require('../assets/img/logo-flitsmeister.svg')
+                    },
+                    {
+                        img: require('../assets/img/logo-sap.svg')
+                    },
+                    {
+                        img: require('../assets/img/logo-redkix.svg')
+                    },
+                    {
+                        img: require('../assets/img/logo-nos.svg')
+                    },
+                ],
+            }
+
+
+        },
     }
 </script>
 

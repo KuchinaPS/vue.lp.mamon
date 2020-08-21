@@ -1,32 +1,10 @@
 <template>
     <div class="team">
-        <TeamItem :image="require('../assets/img/client-1.png')"
-                  name="Vadim"
-                  desc="Managing Director"></TeamItem>
-        <TeamItem :image="require('../assets/img/client-2.png')"
-                  name="Sergey"
-                  desc="Technology Director"></TeamItem>
-        <TeamItem :image="require('../assets/img/client-3.png')"
-                  name="Andrey"
-                  desc="Front-end Developer"></TeamItem>
-        <TeamItem :image="require('../assets/img/client-4.png')"
-                  name="Alex"
-                  desc="Front-end Developer"></TeamItem>
-        <TeamItem :image="require('../assets/img/client-5.png')"
-                  name="Agneshka"
-                  desc="Mobile Developer"></TeamItem>
-        <TeamItem :image="require('../assets/img/client-6.png')"
-                  name="Dmitry"
-                  desc="Back-end Developer"></TeamItem>
-        <TeamItem :image="require('../assets/img/client-7.png')"
-                  name="Artyom"
-                  desc="Back-end Developer"></TeamItem>
-        <TeamItem :image="require('../assets/img/client-8.png')"
-                  name="Evgeny"
-                  desc="Product Designer"></TeamItem>
-        <TeamItem :image="require('../assets/img/client-9.png')"
-                  name="Tom"
-                  desc="Product Designer"></TeamItem>
+        <TeamItem v-for="item in teams"
+                  :key="item"
+                  :image="item.image"
+                  :name="item.name"
+                  :desc="item.desc"></TeamItem>
     </div>
 </template>
 
@@ -35,6 +13,57 @@
 
     export default {
         name: "Team",
+        data() {
+            return {
+                teams: [
+                    {
+                        image: require('../assets/img/client-1.png'),
+                        name: "Vadim",
+                        desc: "Managing Director",
+                    },
+                    {
+                        image: require('../assets/img/client-2.png'),
+                        name: "Sergey",
+                        desc: "Technology Director",
+                    },
+                    {
+                        image: require('../assets/img/client-3.png'),
+                        name: "Andrey",
+                        desc: "Front-end Developer",
+                    },
+                    {
+                        image: require('../assets/img/client-4.png'),
+                        name: "Alex",
+                        desc: "Front-end Developer",
+                    },
+                    {
+                        image: require('../assets/img/client-5.png'),
+                        name: "Agneshka",
+                        desc: "Mobile Developer",
+                    },
+                    {
+                        image: require('../assets/img/client-6.png'),
+                        name: "Dmitry",
+                        desc: "Back-end Developer",
+                    },
+                    {
+                        image: require('../assets/img/client-7.png'),
+                        name: "Artyom",
+                        desc: "Back-end Developer",
+                    },
+                    {
+                        image: require('../assets/img/client-8.png'),
+                        name: "Evgeny",
+                        desc: "Product Designer",
+                    },
+                    {
+                        image: require('../assets/img/client-9.png'),
+                        name: "Tom",
+                        desc: "Product Designer",
+                    }
+                ]
+            }
+        },
         components: {
             TeamItem,
         }
