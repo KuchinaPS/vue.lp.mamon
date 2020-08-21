@@ -2,9 +2,7 @@
     <div class="services">
         <ServicesItem v-for="item in services"
                       :key="item"
-                      :image="item.image"
-                      :article="item.article"
-                      :text="item.text"></ServicesItem>
+                      v-bind="item"></ServicesItem>
     </div>
 </template>
 

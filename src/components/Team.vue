@@ -2,9 +2,7 @@
     <div class="team">
         <TeamItem v-for="item in teams"
                   :key="item"
-                  :image="item.image"
-                  :name="item.name"
-                  :desc="item.desc"></TeamItem>
+                  v-bind="item"></TeamItem>
     </div>
 </template>
 
